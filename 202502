@@ -1,0 +1,227 @@
+# 配置名称: QuantumultX 配置
+# 配置作者: Centralmatrix3
+# 更新时间: 25-02-05 00:00
+
+[general]
+# 直连网络测试
+network_check_url = http://taobao.com/
+
+# 代理策略测试
+server_check_url = http://cp.cloudflare.com/generate_204
+
+# 服务检查超时
+server_check_timeout = 5000
+
+# 配置文件图标
+profile_img_url = https://github.com/Centralmatrix3/Scripts/raw/master/Gallery/Special/Special001.png
+
+# 地理位置检查
+#geo_location_checker = http://ip-api.com/json/?lang=zh-CN, https://github.com/Centralmatrix3/Scripts/raw/master/Scripts/IP-API.js
+#geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://github.com/KOP-XIAO/QuantumultX/raw/master/Scripts/IP_API.js
+
+geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/GeoLocationChecker/QuantumultX/IP-API.js
+# 资源解析器
+resource_parser_url = https://github.com/KOP-XIAO/QuantumultX/raw/master/Scripts/resource-parser.js
+
+# 排除路线
+excluded_routes = 239.255.255.250/32, 24.105.30.129/32, 185.60.112.157/32, 185.60.112.158/32, 182.162.132.1/32
+
+# DNS排除列表
+dns_exclusion_list = *.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me, *.pingan.com.cn, *.cmbchina.com
+
+# UDP丢弃列表
+# udp_drop_list = 443
+
+[dns]
+# 禁用系统DNS/IPv6
+no-system
+no-ipv6
+
+# DNS over HTTP/3
+# prefer-doh3
+
+# 自定义 DNS 服务器
+server = 223.5.5.5
+server = 119.29.29.29
+
+# 自定义 DoH 服务器
+# doh-server = https://doh.pub/dns-query, https://dns.alidns.com/dns-query
+
+[policy]
+# 苹果服务
+static = 苹果服务, direct, proxy, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/Apple-2.png
+
+# 港台番剧
+static = 港台番剧, direct, proxy, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/StreamingSE.png
+
+# 国内媒体
+static = 国内媒体, direct, proxy, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/StreamingCN.png
+
+# 国际媒体
+static = 国际媒体, proxy, direct, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/Streaming.png
+
+# 全球加速
+static = 全球加速, proxy, direct, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/Global.png
+
+# 黑白名单
+static = 黑白名单, proxy, direct, 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/Final.png
+
+# 自动选择
+url-latency-benchmark = 自动选择, server-tag-regex=.*, check-interval=1800, tolerance=50, alive-checking=false, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/Available.png
+
+# 香港节点
+url-latency-benchmark = 香港节点, server-tag-regex=香港|港|🇭🇰|HK|(?i)Hong, check-interval=1800, tolerance=50, alive-checking=false, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/HK.png
+
+# 台湾节点
+url-latency-benchmark = 台湾节点, server-tag-regex=台湾|台|🇹🇼|TW|(?i)Taiwan, check-interval=1800, tolerance=50, alive-checking=false, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/TW.png
+
+# 日本节点
+url-latency-benchmark = 日本节点, server-tag-regex=日本|日|🇯🇵|JP|(?i)Japan, check-interval=1800, tolerance=50, alive-checking=false, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/JP.png
+
+# 韩国节点
+url-latency-benchmark = 韩国节点, server-tag-regex=韩国|韩|🇰🇷|KR|(?i)Korea, check-interval=1800, tolerance=50, alive-checking=false, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/KR.png
+
+# 狮城节点
+url-latency-benchmark = 狮城节点, server-tag-regex=新加坡|新|🇸🇬|SG|(?i)Singapore, check-interval=1800, tolerance=50, alive-checking=false, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/SG.png
+
+# 美国节点
+url-latency-benchmark = 美国节点, server-tag-regex=美国|美|🇺🇸|US|(?i)States, check-interval=1800, tolerance=50, alive-checking=false, img-url=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Gallery/Color/US.png
+
+[server_local]
+vmess=uswuxian.pai50288.uk:8443, method=aes-128-gcm, password=c313606f-98c2-4d7b-ba74-48b94f61b11d, obfs=wss, obfs-uri=/, tls-verification=false, fast-open=false, udp-relay=false, aead=true, tag=US-1Gbps-无限量
+
+
+vless=yl2s.0owap.xyz:443, method=none, password=7d78ecee-850f-48fc-92d3-00cdababca30, obfs=wss, obfs-host=yl2s.0owap.xyz, obfs-uri=/7d78ecee-850f-48fc-92d3-00cdababca30, tls-verification=false, fast-open=false, udp-relay=false, tag=🇭🇰香港松果1
+
+vless=274c.0owap.xyz:443, method=none, password=1f83827d-b91f-45e1-968b-b7ee597b7d52, obfs=wss, obfs-host=274c.0owap.xyz, obfs-uri=/1f83827d-b91f-45e1-968b-b7ee597b7d52, tls-verification=false, fast-open=false, udp-relay=false, tag=🇭🇰香港松果2
+
+vless=yysu.0owap.xyz:443, method=none, password=1a8a848e-8dcb-4f05-a048-3c9655e27e05, obfs=wss, obfs-host=yysu.0owap.xyz, obfs-uri=/1a8a848e-8dcb-4f05-a048-3c9655e27e05, tls-verification=false, fast-open=false, udp-relay=false, tag=🇭🇰香港松果3
+
+
+
+shadowsocks=116.196.121.5:15840, method=aes-256-cfb, password=miaoge110., fast-open=false, udp-relay=false, tag=🇨🇳回国节点
+
+# 本地节点
+
+[server_remote]
+https://api.flowercloud.xyz/osubscribe.php?sid=23374&token=FUB14MIG1h69&sip002=1, tag=花云☁️, update-interval=172800, opt-parser=true, enabled=true
+http://106.75.141.168:3389/api/v1/client/subscribe?token=40ca716de9bd1f7a49e1cfe3f72eb573, tag=锤锤, update-interval=172800, opt-parser=false, enabled=true
+https://web.myservps.work/api/v1/client/subscribe?token=53a0bf722777d76955f6aa940c3b8a45, tag=大佬分享100G每月, update-interval=172800, opt-parser=true, enabled=true
+https://sspinet-zaeoxnowmv.cn-shanghai.fcapp.run/api/v1/client/subscribe?token=65d432b84aa54475449d3ff42b934dde, tag=s s, update-interval=172800, opt-parser=true, enabled=true
+https://air.jiaranexport.com/api/v1/client/subscribe?token=9f1d9b5e073c6b344d3eed93bedd4562, tag=自建, img-url=airplane.circle.system, update-interval=172800, opt-parser=false, enabled=true
+http://xyz.ucloudhost.top:7001/s/f91f3e73bb00f16c7a863c3ff6944df8, tag=鸭子云, update-interval=172800, opt-parser=true, enabled=false
+https://egayun.top/api/v1/client/subscribe?token=c2977cbf73b55bd7f939f0990b15ca63, tag=ega, img-url=hare.system, update-interval=172800, opt-parser=false, enabled=false
+
+http://sub.hy2.cloudns.org/api/v1/client/subscribe?token=f9c478af03850f43f8c3a10fa8e0bfbf, tag=神器, update-interval=172800, opt-parser=false, enabled=false
+
+https://jmssub.net/members/getsub.php?service=51056&id=c802ec4b-eb41-43a4-8393-fb351ca946b1, tag=Jms, update-interval=172800, opt-parser=true, enabled=false
+
+
+
+https://vot.278986.xyz/api/v1/client/subscribe?token=a8cf9693056de56b89eeeb245683b163, tag=EMO, update-interval=172800, opt-parser=true, enabled=false
+# 远程订阅
+
+[filter_local]
+# 最终规则
+FINAL, 黑白名单
+
+[filter_remote]
+#YouTube
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube, force-policy=香港节点, update-interval=172800, opt-parser=true, enabled=true
+#去广告
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list, tag=去广告, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+#Open AI
+https://raw.githubusercontent.com/ddgksf2013/Filter/master/OpenAi.list, tag=Open AI, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
+# 规则修正
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
+
+# 广告拦截
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/Advertising.list, tag=广告拦截, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
+
+# 国际媒体
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/GlobalMedia.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=false, enabled=true
+
+# 港台番剧
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/HMTMedia.list, tag=港台番剧, force-policy=港台番剧, update-interval=172800, opt-parser=false, enabled=true
+
+# 国内媒体
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/ChinaMedia.list, tag=国内媒体, force-policy=国内媒体, update-interval=172800, opt-parser=false, enabled=true
+
+# 全球加速
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/Global.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=false, enabled=true
+
+# 苹果服务
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=false, enabled=true
+
+# LAN规则
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/LAN.list, tag=LAN规则, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
+
+# 国内规则
+https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/QuantumultX/Ruleset/GEOIPCN.list, tag=国内规则, force-policy=国内媒体, update-interval=172800, opt-parser=false, enabled=true
+#屏蔽更新
+
+[rewrite_local]
+# 本地重写
+
+[rewrite_remote]
+https://whatshub.top/rewrite/youtube.conf, tag=YouTube, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/YoutubeAds.conf, tag=YouTube广告屏蔽, update-interval=172800, opt-parser=true, enabled=true
+
+# ======= 会员解锁 ======= #
+https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.conf, tag=App解锁合集, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/Moli-X/Resources/main/Rewrite/Collections.conf, tag=莫离合集, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/ddgksf2013/dev/master/ForOwnUse.conf, tag=墨鱼合集, update-interval=86400, opt-parser=false, enabled=true
+
+https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/Bilibili.conf, tag=B站去广告+1080P高码率, update-interval=86400, opt-parser=false, enabled=true
+
+
+# https://raw.githubusercontent.com/zwf234/rules/master/QuantumultX/price.conf, tag=京东淘宝比价, update-interval=172800, opt-parser=true, enabled=true
+
+# ======= 广告净化 ======= #
+https://limbopro.com/contentFarm.conf, tag=屏蔽内容农场, update-interval=86400, opt-parser=true, enabled=true
+
+https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/StartUp.conf, tag=墨鱼去开屏𝐕𝟐.𝟎, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/zwf234/rules/master/QuantumultX/tailadv.conf, tag=奇心去广告, update-interval=86400, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Script/JS_Ad.conf, tag=西宁去广告, update-interval=86400, opt-parser=true, enabled=true
+
+
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet, tag=App&小程序净化合集, update-interval=86400, opt-parser=false, enabled=true
+
+# ======= 网页优化 ======= #
+https://github.com/ddgksf2013/Rewrite/raw/master/Html/WebAdBlock.conf, tag=影视网站去广告, update-interval=86400, opt-parser=false, enabled=true
+
+https://github.com/ddgksf2013/Rewrite/raw/master/Html/Q-Search.conf, tag=Safari超级搜索, update-interval=86400, opt-parser=false, enabled=true
+
+
+# 远程重写
+
+[task_local]
+# 媒体解锁查询
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=媒体解锁查询, img-url=play.circle.system, enabled=true
+
+# 节点送中查询
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/switch-check-google.js, tag=节点送中查询, img-url=drop.circle.system, enabled=true
+
+# 网络信息查询
+event-interaction https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/net-lsp-x.js, tag=网络信息查询, img-url=link.circle.system, enabled=true
+#地理位置
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=地理位置查询, img-url=location.circle.system, enabled=true
+#谷歌送中
+# > 代理链路检测
+
+
+[http_backend]
+# HTTPBackend
+
+[mitm]
+passphrase = 7ED2C25A
+p12 = MIILuwIBAzCCC4UGCSqGSIb3DQEHAaCCC3YEggtyMIILbjCCBccGCSqGSIb3DQEHBqCCBbgwggW0AgEAMIIFrQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIa+Kh/o904YoCAggAgIIFgJVuUvZJWpjqVRO7Q9x3ucEZM3gRUP+cOFm0XSt3ebIBwpo4yHijmeWmga6XPUpqZNbQMZ5zLKJ/LDXPXiVgWHeqiPjuLr+C7dG4Q5MtaXUS9NPlN8Pg8I/qAiDfTEbX6P1GtAn2smclqCmdzNn4pBKxgM/wZ9twgo4MOKX0wQsiUn0IiJ1zuMlEVN4jeRdXXaPB/8e330O+16gHBVWy/KfDiEcTci8J7Zn7xuRXAIDknWelzfgShwbYwUOtqfsQ2q3m7r+uCIKS5UuVnSfYA6KzdUxeFUj+poSed11lXW35o+jJhj9IOOKSlGNhS4q9j5QgHQtuhf5h3Xh5ffb+ZCKMcHFamLVgWCwRJ1LFGnZBt1Ms/YsfgRBYg2vHJvkUgQyx4s3SL0IqIGsHefEb8GLDC/cB+03cX4/Vir6h7hjwy8h2yk0cQ4qRbyqMBBVEzLw/3ni8VgIzC8vW6D5SgS8B8vZQlDA9y2cXXd6sDPFL4OJRUz6sWudY9qUmwbS4ZpmedBYvBA+72UuqlGY1tzfSFI+IKGsQOj7FIkfu6mkNY+XyoviIBnhTE98XrfAL/Bq748Y9afjH3qJmgJNAbZRzGuQ70xxCzNh6ePYAzKLKWJ00wttgU8yFvbqcg7nbOivmmnpamIHDEuP//dfNcMdOpusj9OnI2bgtNJxX7xWBlLHS87l6BCt4ya7ZCUMeZO7KtdFIuuyRL/ht5O2mYfITUnSjdfJtzy8iJx3jnEczIrj9X5yLdrIPh54rwPtL32a+ubJG9UY9Vcq5d2k6S4Azkv0AzN/Vc3xvGbXWbXqCeN8SI6REk3v9nnpVJ+8HR78O8M+B/MQLcHkFUCxTFYh1pW8EFS+9pWtF5/42ni21pqNFKOk0N88HMekXGU5IvnHNwn/sl4mTOaGjfcqJKXcjXrSrD4MjR6QCEceE5MbVOL2c5XROt8rPQ4dNabVRevUgKbhT2I7esGxGoHm9XQ9P9WKHuK7cJDovgiAbx3e6nodldRoJFmHDgiLj+KAY/Ahsp5d5eIL8PKBrkao/XZ8mIJet6o1wz4ECbbqA+YDHsooX8AMzWlezHA+bBYAG/TinuupPD3xjj8yNbU0WXVoGlkB9si65TOxpjw0nBNAw5f+OOn6O8mVljXxgci949qL+WGzdeHYJ/TJ2gdJLL//su4gVWy3529XpfjnUuU4ro0EfHWhDimOxOUcp7LBY+QcADqbI2IYoc4MNdG/5j5nqBOkN0Tzeurll+GqqPW+X1k/wln6qn42/6sCheUgoAElj/LslWp2KVO5R6Nyo1GRqqHZ0OBknn0ufjyoMz1pPztEoFfMlqFrzXDMyBT3ER/mMDLjJa2G1LFfEkPMHriW+btYmPM1p6/hSQCIGLvNQH4NoU3ItJbdtRq2oAWtXvZZLsCJtGN/Vf+7kuiiPH6rdZUx3Guf5r4fG87M3NHgRR77BhfP1BfTgCfmXza5PfmD+Ko8WZ6fsXFC5ebkMoHmcJmQBEemmG8z4GOoBkuWN5y5/TKbCF8T1w+JVToIRpLE5OL20m5zB2rLj/Rxw+V35Rh8nFq7Wsu3ZU+WEVLFOjqHpmotw2kzkUSsXY9F+urxx72jcEaj8c7vFGJlDv67D7tw2pJgDAzYEqicYCkp/Q6uoKTCdv9bPsdJPuZys5hqtYlk4BL7V7ZwUpSvKZWMQKLD90dXBF4I84MyI1P44KwzltiIa7PINsx5zMKUf2kHIU53mVA8+VS/KDmPz18VTOKRPlbKa0p8r0+C+WzFKxipQWEPzkQRQzHTGC22/H78TR31Lt8U4pR10rAvsOFiKd6zUJjq0TdJOejvF0lCny+a1alrzBPxR+vkSkERPWdspBxQeG1nw/lpJuhxPPYowggWfBgkqhkiG9w0BBwGgggWQBIIFjDCCBYgwggWEBgsqhkiG9w0BDAoBAqCCBO4wggTqMBwGCiqGSIb3DQEMAQMwDgQIcoyWDZdB5qYCAggABIIEyFlJB2yYXjj5eVgg9ccVZvldsLJhY6DtkNwg3gezf/Kb49YHETgWwhik2Lipen15uHFLv/zS1CiG/ptACznp2vmz08YEqLkwXBedIpsZA2Kj3DIR/KNzObNOxsVbF1iaIg2HzgmMM2xvdSJk6BCi/1mV/DWpGsIGckj9OEkkIV5wgq9UxFjswxvm3JESlToETEoSTjpYOvUNdJBy8bs6cdZoxoklyckLzFY5IrntkLWgdCkr5PEZBprMw7rpmkaShvvoKfS0x4YNSdMpo7pZod6beeUnOcsPIfgPyoNRYXHsVgMn0mjYO/SA1q6uqY8MkQZKDLMbFmuKyYM104AcOm1Mxw9dDKsG0rabR25dJRWjx3aLQ13ZzHMMEhbQTCuba7ZyVxESCuCup9tvGc5GDilbZusH7jvS/giTmvGW3migYA9YQMtLPxOYRPCIBkMaO8aBG6rcbOFTRx5lpwqicpUWmcdmYD/13B+g396QFg2/TCSpj31jdGb6vaHUw3Hm+/WRO5IKPW+htgIGc3/aKH51VCEwV5dIuYkOScXkWPIHDddMj2KTNYlQdyNx7vluScBBAzP0Do4HGF3MqHD4zdhj9ysQLqs9ouKqBEl+pOltoTNkcEZZN/6Zzz+i1twLNnz88PlZip5jD3KKteLw06oS6t495Lk6j2jn2i+bxrjbV2NeMrt2ii+2r5d5nNntx21ZfvZYisbxDxHHFLdJ/YRJYehvc2fZwu8ka7bsk/+EhDjOUJPm38fS5ubZoOOWi79BhSkG6F7FrYPqTnbOey3phvb8T8ah0JMFeot7xFci1zPpxR1wkn4DESItqF8EXsxHUIx4BUSD6dn960ztfTlp+LMx/FfT8aUntGqm3muhUXQNdhR62TmL5Tx7lVqH0s7l+7l9fn0VqWvfYTC3hGpZoUXDCoqmKjjUhgHJjKAutVMabdFAyvkaRmHb/A3P8TxDBCwuQIoboC4q4ZaEMjnY6kEecO6GYQIpMrPIhK51EFzUG47AJjx33zGD7z8Gqi9oe72X9jJKPB2RVqSeo4gJTgd7SEwCaQgyPQj3xyDWAy75ezJYqeX8lJw/QIFpGrDFcf52schF9BWMp5ocLsM2+Xwb5xeME8g4ejsF59tBeRTO/vyP+NwxCk0Tq9qDX1CeR5oKTLOHDA92Sv/ZTNVvtXaBKMc/Tz9Jwh4EC1xyVetRt5rHUAilnB7fkElWsjv6bQegEUZkQV+I9FVx082S/zlY3Ma6p4Hb4ecKHJTwMblmOd41fkVubj4FPl9Y31w0jTyeFBb3V/EbyOR2c1FV+R70V0lWU0TZ/bSKbbvRhkNSv72iaZ+P6hVE7L7/g/1XGDQp6d4Sa5wqwdbH+0Y2ULmWP3Sbnf56IYpPeHdsBWKqlrXnRfgT7jXeD0xtdlbPd6NFi8Ab6y1AbEFF5WiYsQK5MGHmF4KVeMeWbOCAU9mq3oLJKTHs8u/rAKeEQVkzseWkkpN1LKJCILjnfll1yGJH0062rjYhA/tXtnyJLkuUBJ5GujEN5edVQcEAcvRmJuxNZDdnkPQT+neNZnr2ieQ6du2y8iaRXYAGSoyqyzd3IK8UbKF9XTwkIF4M/uhTRh07Hi7KWL84hIae1V3Z+fIASPjNkDGBgjAjBgkqhkiG9w0BCRUxFgQUo6Amn/fXF8r8mNLn8C8BVuEMWm8wWwYJKoZIhvcNAQkUMU4eTABRAHUAYQBuAHQAdQBtAHUAbAB0ACAAWAAgAEMAQQAgAEEANQBEAEQANABDAEYANwAgACgAMQAwACAARgBlAGIAIAAyADAAMgA1ACkwLTAhMAkGBSsOAwIaBQAEFOUqA+KCsE6Gx288J6k1dOcNA+9aBAhX3ywfP2187w==
+# 跳过验证证书
+skip_validating_cert = false
+
+# 主机名
+hostname = -buy.itunes.apple.com
